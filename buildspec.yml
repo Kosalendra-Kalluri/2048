@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Nothing to install for static site"
+  pre_build:
+    commands:
+      - echo "Pre-build step: checking files"
+      - ls -l
+  build:
+    commands:
+      - echo "Build step: preparing static files"
+      - mkdir -p 2048-game
+      - cp index.html 2048-game/
+      - cp script.js 2048-game/
+      - cp style.css 2048-game/
+  post_build:
+    commands:
+      - echo "Build completed successfully!"
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 2048-game
