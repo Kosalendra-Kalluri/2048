@@ -6,11 +6,11 @@ phases:
       - echo "Nothing to install for static site"
   pre_build:
     commands:
-      - echo "Pre-build step: checking files"
+      - echo "Pre-build step, checking files"
       - ls -l
   build:
     commands:
-      - echo "Build step: preparing static files"
+      - echo "Build step, preparing static files"
       - mkdir -p 2048-game
       - cp index.html 2048-game/
       - cp script.js 2048-game/
